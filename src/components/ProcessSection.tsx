@@ -27,40 +27,40 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section id="process" className="py-20 bg-gray-50">
+    <section id="process" className="py-20 bg-neutral-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-sm font-medium text-light-text mb-4 tracking-wider uppercase">
+          <p className="text-sm font-medium text-neutral-gray mb-4 tracking-wider uppercase">
             How We Work
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-neutral-black mb-6 tracking-tight">
             Our Partnership Process
           </h2>
         </div>
         
         <div className="relative">
           {/* Progress line */}
-          <div className="hidden lg:block absolute top-24 left-0 right-0 h-0.5 bg-gray-300">
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-orange via-brand-pink to-brand-purple"></div>
+          <div className="hidden lg:block absolute top-24 left-0 right-0 h-0.5 bg-neutral-gray/20">
+            <div className="absolute inset-0 bg-gradient-to-r from-accent-lime via-accent-coral to-accent-purple"></div>
           </div>
           
           <div className="grid lg:grid-cols-4 gap-8">
             {steps.map((step, index) => (
               <div key={index} className="relative">
                 {/* Step number circle */}
-                <div className="relative z-10 w-12 h-12 bg-brand-green-bright rounded-full flex items-center justify-center text-white font-bold text-lg mb-6 mx-auto lg:mx-0">
+                <div className="relative z-10 w-12 h-12 bg-accent-lime rounded-[30%] flex items-center justify-center text-neutral-black font-semibold text-lg mb-6 mx-auto lg:mx-0">
                   {step.number}
                 </div>
                 
                 <div className="text-center lg:text-left">
-                  <h3 className="text-xl font-bold text-foreground mb-4">
+                  <h3 className="text-xl font-semibold text-neutral-black mb-4 tracking-tight">
                     {step.title}
                   </h3>
-                  <p className="text-light-text mb-4 leading-relaxed">
+                  <p className="text-neutral-gray mb-4 leading-relaxed font-light">
                     {step.description}
                   </p>
-                  <p className="text-sm font-medium text-brand-green italic">
-                    "{step.quote}"
+                  <p className="text-sm font-medium text-neutral-black">
+                    {step.quote}
                   </p>
                 </div>
               </div>

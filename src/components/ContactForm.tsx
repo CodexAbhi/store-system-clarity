@@ -55,15 +55,15 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-dark">
+    <section id="contact" className="py-20 bg-neutral-light">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Sync Your Success?
+          <h2 className="text-4xl md:text-5xl font-bold text-neutral-black mb-6 tracking-tight">
+            Strategic Alliance
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Book your free 45-minute retail audit. We'll analyze your current systems and 
-            show you exactly how to streamline operations and boost profitability.
+          <p className="text-xl text-neutral-gray max-w-3xl mx-auto font-light">
+            We become your strategic tech ally—auditing, building, and scaling your digital 
+            ecosystem so you save costs, make data-driven decisions, and focus entirely on growth.
           </p>
         </div>
         
@@ -71,63 +71,63 @@ const ContactForm = () => {
           {/* Contact Info */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">
+              <h3 className="text-2xl font-semibold text-neutral-black mb-6 tracking-tight">
                 Your Long-Term Tech Partner
               </h3>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                "We partner with businesses where tech isn't an expense—it's the growth engine." 
+              <p className="text-neutral-gray text-lg leading-relaxed mb-8 font-light">
+                We partner with businesses where tech becomes the growth engine. 
                 We stay with you till the systems work seamlessly—and beyond.
               </p>
             </div>
             
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-brand-green-bright/20 rounded-full flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-brand-green-bright" />
+                <div className="w-12 h-12 bg-accent-lime/10 rounded-[30%] flex items-center justify-center">
+                  <Phone className="w-5 h-5 text-neutral-black" />
                 </div>
                 <div>
-                  <p className="text-white font-medium">Call Us</p>
-                  <p className="text-gray-300">+1 (555) 123-4567</p>
+                  <p className="text-neutral-black font-medium">Call Us</p>
+                  <p className="text-neutral-gray">+1 (555) 123-4567</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-brand-orange/20 rounded-full flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-brand-orange" />
+                <div className="w-12 h-12 bg-accent-coral/10 rounded-[30%] flex items-center justify-center">
+                  <Mail className="w-5 h-5 text-neutral-black" />
                 </div>
                 <div>
-                  <p className="text-white font-medium">Email Us</p>
-                  <p className="text-gray-300">hello@retailsync.com</p>
+                  <p className="text-neutral-black font-medium">Email Us</p>
+                  <p className="text-neutral-gray">hello@retailsync.com</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-brand-purple/20 rounded-full flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-brand-purple" />
+                <div className="w-12 h-12 bg-accent-purple/10 rounded-[30%] flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-neutral-black" />
                 </div>
                 <div>
-                  <p className="text-white font-medium">Visit Us</p>
-                  <p className="text-gray-300">San Francisco, CA</p>
+                  <p className="text-neutral-black font-medium">Visit Us</p>
+                  <p className="text-neutral-gray">San Francisco, CA</p>
                 </div>
               </div>
             </div>
             
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-              <h4 className="text-white font-semibold mb-2">What to Expect:</h4>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Deep dive into your current operations</li>
-                <li>• Identification of cost-saving opportunities</li>
-                <li>• Custom roadmap for your growth goals</li>
-                <li>• No-pressure consultation</li>
+            <div className="bg-neutral-white rounded-2xl p-6 border border-neutral-gray/10 shadow-minimal">
+              <h4 className="text-neutral-black font-medium mb-2">What to Expect:</h4>
+              <ul className="space-y-2 text-neutral-gray font-light">
+                <li>Deep dive into your current operations</li>
+                <li>Identification of cost-saving opportunities</li>
+                <li>Custom roadmap for your growth goals</li>
+                <li>No-pressure consultation</li>
               </ul>
             </div>
           </div>
           
           {/* Contact Form */}
-          <Card className="bg-white/10 backdrop-blur-sm border-white/20">
+          <Card className="bg-neutral-white border border-neutral-gray/10 shadow-minimal">
             <CardHeader>
-              <CardTitle className="text-white text-2xl">Claim Your Free Audit</CardTitle>
-              <CardDescription className="text-gray-300">
+              <CardTitle className="text-neutral-black text-2xl font-semibold">Claim Your Free Audit</CardTitle>
+              <CardDescription className="text-neutral-gray font-light">
                 Tell us about your retail business and current challenges
               </CardDescription>
             </CardHeader>
@@ -135,19 +135,19 @@ const ContactForm = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="name" className="text-white">Full Name *</Label>
+                    <Label htmlFor="name" className="text-neutral-black font-medium">Full Name *</Label>
                     <Input
                       id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                      className="bg-neutral-light border-neutral-gray/20 text-neutral-black placeholder:text-neutral-gray/50"
                       placeholder="John Smith"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="email" className="text-white">Email *</Label>
+                    <Label htmlFor="email" className="text-neutral-black font-medium">Email *</Label>
                     <Input
                       id="email"
                       name="email"
@@ -155,7 +155,7 @@ const ContactForm = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                      className="bg-neutral-light border-neutral-gray/20 text-neutral-black placeholder:text-neutral-gray/50"
                       placeholder="john@company.com"
                     />
                   </div>
@@ -163,52 +163,52 @@ const ContactForm = () => {
                 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="company" className="text-white">Company Name *</Label>
+                    <Label htmlFor="company" className="text-neutral-black font-medium">Company Name *</Label>
                     <Input
                       id="company"
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
                       required
-                      className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                      className="bg-neutral-light border-neutral-gray/20 text-neutral-black placeholder:text-neutral-gray/50"
                       placeholder="Your Retail Store"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="phone" className="text-white">Phone</Label>
+                    <Label htmlFor="phone" className="text-neutral-black font-medium">Phone</Label>
                     <Input
                       id="phone"
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                      className="bg-neutral-light border-neutral-gray/20 text-neutral-black placeholder:text-neutral-gray/50"
                       placeholder="+1 (555) 123-4567"
                     />
                   </div>
                 </div>
                 
                 <div>
-                  <Label htmlFor="currentSystems" className="text-white">Current Systems</Label>
+                  <Label htmlFor="currentSystems" className="text-neutral-black font-medium">Current Systems</Label>
                   <Textarea
                     id="currentSystems"
                     name="currentSystems"
                     value={formData.currentSystems}
                     onChange={handleChange}
-                    className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                    className="bg-neutral-light border-neutral-gray/20 text-neutral-black placeholder:text-neutral-gray/50"
                     placeholder="What POS, CRM, inventory systems are you currently using?"
                     rows={3}
                   />
                 </div>
                 
                 <div>
-                  <Label htmlFor="painPoints" className="text-white">Biggest Challenges *</Label>
+                  <Label htmlFor="painPoints" className="text-neutral-black font-medium">Biggest Challenges *</Label>
                   <Textarea
                     id="painPoints"
                     name="painPoints"
                     value={formData.painPoints}
                     onChange={handleChange}
                     required
-                    className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                    className="bg-neutral-light border-neutral-gray/20 text-neutral-black placeholder:text-neutral-gray/50"
                     placeholder="What operational challenges are costing you time and money?"
                     rows={3}
                   />
@@ -216,42 +216,42 @@ const ContactForm = () => {
                 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="revenue" className="text-white">Annual Revenue Range</Label>
+                    <Label htmlFor="revenue" className="text-neutral-black font-medium">Annual Revenue Range</Label>
                     <select
                       id="revenue"
                       name="revenue"
                       value={formData.revenue}
                       onChange={handleChange}
-                      className="w-full h-10 px-3 rounded-md bg-white/10 border border-white/20 text-white"
+                      className="w-full h-10 px-3 rounded-md bg-neutral-light border border-neutral-gray/20 text-neutral-black"
                     >
-                      <option value="" className="text-black">Select range</option>
-                      <option value="under-500k" className="text-black">Under $500K</option>
-                      <option value="500k-1m" className="text-black">$500K - $1M</option>
-                      <option value="1m-5m" className="text-black">$1M - $5M</option>
-                      <option value="5m-plus" className="text-black">$5M+</option>
+                      <option value="">Select range</option>
+                      <option value="under-500k">Under $500K</option>
+                      <option value="500k-1m">$500K - $1M</option>
+                      <option value="1m-5m">$1M - $5M</option>
+                      <option value="5m-plus">$5M+</option>
                     </select>
                   </div>
                   <div>
-                    <Label htmlFor="timeline" className="text-white">Implementation Timeline</Label>
+                    <Label htmlFor="timeline" className="text-neutral-black font-medium">Implementation Timeline</Label>
                     <select
                       id="timeline"
                       name="timeline"
                       value={formData.timeline}
                       onChange={handleChange}
-                      className="w-full h-10 px-3 rounded-md bg-white/10 border border-white/20 text-white"
+                      className="w-full h-10 px-3 rounded-md bg-neutral-light border border-neutral-gray/20 text-neutral-black"
                     >
-                      <option value="" className="text-black">Select timeline</option>
-                      <option value="immediate" className="text-black">Immediate (1-2 weeks)</option>
-                      <option value="month" className="text-black">Within a month</option>
-                      <option value="quarter" className="text-black">Within 3 months</option>
-                      <option value="planning" className="text-black">Just planning ahead</option>
+                      <option value="">Select timeline</option>
+                      <option value="immediate">Immediate (1-2 weeks)</option>
+                      <option value="month">Within a month</option>
+                      <option value="quarter">Within 3 months</option>
+                      <option value="planning">Just planning ahead</option>
                     </select>
                   </div>
                 </div>
                 
                 <Button 
                   type="submit" 
-                  variant="brand" 
+                  variant="minimal" 
                   size="xl" 
                   className="w-full group"
                   disabled={isSubmitting}
@@ -260,7 +260,7 @@ const ContactForm = () => {
                   {!isSubmitting && <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />}
                 </Button>
                 
-                <p className="text-sm text-gray-400 text-center">
+                <p className="text-sm text-neutral-gray text-center font-light">
                   No spam, no sales pressure. Just actionable insights for your business.
                 </p>
               </form>

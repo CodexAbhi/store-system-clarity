@@ -7,29 +7,29 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-dark-bg border-t border-white/10">
+    <footer className="bg-neutral-black border-t border-neutral-gray/20">
       <div className="container mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Brand Section */}
           <div className="space-y-6">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-brand rounded-full"></div>
-              <span className="text-xl font-bold text-white">RetailSync</span>
+            <div className="flex items-center space-x-3">
+              <div className="w-8 h-8 bg-accent-lime rounded-[30%]"></div>
+              <span className="text-xl font-semibold text-neutral-white">RetailSync</span>
             </div>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-neutral-gray leading-relaxed font-light">
               Your long-term tech partner – building ecosystems that automate growth.
             </p>
             <div className="flex space-x-4">
-              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white">
+              <Button variant="ghost" size="icon" className="text-neutral-gray hover:text-neutral-white">
                 <Facebook className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white">
+              <Button variant="ghost" size="icon" className="text-neutral-gray hover:text-neutral-white">
                 <Twitter className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white">
+              <Button variant="ghost" size="icon" className="text-neutral-gray hover:text-neutral-white">
                 <Linkedin className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white">
+              <Button variant="ghost" size="icon" className="text-neutral-gray hover:text-neutral-white">
                 <Instagram className="h-5 w-5" />
               </Button>
             </div>
@@ -38,7 +38,7 @@ const Footer = () => {
           {/* Let's Talk Section */}
           <div className="lg:col-span-2 text-center lg:text-right">
             <div className="mb-8">
-              <h3 className="text-6xl md:text-8xl font-bold bg-gradient-brand bg-clip-text text-transparent mb-4">
+              <h3 className="text-6xl md:text-8xl font-bold text-neutral-white mb-4 tracking-tight">
                 LET'S TALK
               </h3>
             </div>
@@ -46,24 +46,24 @@ const Footer = () => {
         </div>
         
         {/* Bottom Section */}
-        <div className="border-t border-white/10 pt-8 mt-16">
+        <div className="border-t border-neutral-gray/20 pt-8 mt-16">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-400 text-sm">
+            <div className="text-neutral-gray text-sm font-light">
               <p>© 2024 - 2025 | All rights reserved by RetailSync</p>
-              <p>Trusted by 50+ businesses</p>
+              <p>Trusted by businesses</p>
             </div>
             
-            <div className="flex items-center space-x-8 text-sm">
-              <a href="#about" className="text-gray-400 hover:text-white transition-colors">
+            <div className="flex items-center space-x-8 text-sm font-medium">
+              <a href="#about" className="text-neutral-gray hover:text-neutral-white transition-colors">
                 ABOUT US
               </a>
-              <a href="#contact" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#contact" className="text-neutral-gray hover:text-neutral-white transition-colors">
                 CONTACT
               </a>
-              <a href="#privacy" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#privacy" className="text-neutral-gray hover:text-neutral-white transition-colors">
                 PRIVACY POLICY
               </a>
-              <a href="#terms" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#terms" className="text-neutral-gray hover:text-neutral-white transition-colors">
                 TERMS OF SERVICE
               </a>
             </div>
@@ -72,7 +72,7 @@ const Footer = () => {
               variant="ghost" 
               size="icon"
               onClick={scrollToTop}
-              className="text-gray-400 hover:text-white bg-white/5 hover:bg-white/10 rounded-full"
+              className="text-neutral-gray hover:text-neutral-white bg-neutral-white/5 hover:bg-neutral-white/10 rounded-[30%]"
             >
               <ArrowUp className="h-5 w-5" />
             </Button>

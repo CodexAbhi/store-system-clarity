@@ -33,13 +33,13 @@ const SolutionsSection = () => {
   ];
 
   return (
-    <section id="solutions" className="py-20 bg-gray-50">
+    <section id="solutions" className="py-20 bg-neutral-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-neutral-black mb-8 tracking-tight">
             What We Integrate & Streamline
           </h2>
-          <p className="text-lg text-light-text max-w-3xl mx-auto">
+          <p className="text-lg text-neutral-gray max-w-3xl mx-auto font-light">
             POS, Billing, Inventory, CRM, Loyalty, Staff Operations, E-commerce, WhatsApp, 
             Analytics, Finance, HR. We don't replace unless needed—we optimize and connect.
           </p>
@@ -47,22 +47,22 @@ const SolutionsSection = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (
-            <div key={index} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 group border border-gray-100">
-              {/* Small accent circle */}
-              <div className="w-3 h-3 bg-brand-green-bright rounded-full mb-6 group-hover:scale-125 transition-transform duration-300"></div>
+            <div key={index} className="bg-neutral-light rounded-2xl p-8 shadow-minimal hover:shadow-accent transition-all duration-300 group border border-neutral-gray/10">
+              {/* Small accent element */}
+              <div className="w-3 h-3 bg-accent-lime rounded-full mb-6 group-hover:scale-125 transition-transform duration-300"></div>
               
-              <h3 className="text-xl font-bold text-foreground mb-4">
+              <h3 className="text-xl font-semibold text-neutral-black mb-4 tracking-tight">
                 {solution.title}
               </h3>
-              <p className="text-light-text mb-6 leading-relaxed">
+              <p className="text-neutral-gray mb-6 leading-relaxed font-light">
                 {solution.description}
               </p>
               
               <div className="space-y-2">
                 {solution.features.map((feature, idx) => (
                   <div key={idx} className="flex items-center text-sm">
-                    <span className="text-brand-green-bright mr-2">+</span>
-                    <span className="text-foreground">{feature}</span>
+                    <div className="w-1 h-1 bg-neutral-black rounded-full mr-3"></div>
+                    <span className="text-neutral-black font-medium">{feature}</span>
                   </div>
                 ))}
               </div>
