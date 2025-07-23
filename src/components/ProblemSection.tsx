@@ -45,7 +45,7 @@ const ProblemSection = () => {
             <div key={index} className="text-center group hover:scale-[1.02] transition-transform duration-300">
               <div className="bg-neutral-white rounded-2xl p-8 h-full border border-neutral-gray/10 shadow-minimal">
                 <div className="w-16 h-16 bg-accent-coral/10 rounded-[30%] flex items-center justify-center mb-6 mx-auto">
-                  <AlertTriangle className="w-8 h-8 text-neutral-black" />
+                  {problem.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-neutral-black mb-4 tracking-tight">
                   {problem.title}

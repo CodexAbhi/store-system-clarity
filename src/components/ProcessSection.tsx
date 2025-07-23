@@ -40,9 +40,9 @@ const ProcessSection = () => {
         
         <div className="relative">
           {/* Progress line */}
-          <div className="hidden lg:block absolute top-24 left-0 right-0 h-0.5 bg-neutral-gray/20">
+          {/* <div className="hidden lg:block absolute top-24 left-0 right-0 h-0.5 bg-neutral-gray/20">
             <div className="absolute inset-0 bg-gradient-to-r from-accent-lime via-accent-coral to-accent-purple"></div>
-          </div>
+          </div> */}
           
           <div className="grid lg:grid-cols-4 gap-8">
             {steps.map((step, index) => (

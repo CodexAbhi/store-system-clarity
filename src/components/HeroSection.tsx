@@ -7,15 +7,20 @@ const HeroSection = () => {
     contactSection?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const scrollToProcess = () => {
+    const processSection = document.getElementById('process');
+    processSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section id="home" className="min-h-screen bg-neutral-white relative overflow-hidden pt-20">
       {/* Background decorative elements */}
       <div className="absolute top-20 right-10 w-32 h-32 bg-accent-lime rounded-[30%] opacity-20"></div>
-      <div className="absolute bottom-20 left-10 w-48 h-48 bg-accent-coral rounded-[60%] opacity-15"></div>
+      <div className="absolute bottom-20 left-10 w-48 h-48 bg-accent-coral rounded-[60%] opacity-15 z-0"></div>
       <div className="absolute top-1/2 right-1/4 w-6 h-6 bg-neutral-black rounded-full"></div>
       <div className="absolute top-1/3 right-1/3 w-4 h-4 bg-neutral-black rounded-full"></div>
       
-      <div className="container mx-auto px-6 py-20">
+      <div className="container mx-auto px-6 py-20 z-10 relative">
         <div className="max-w-4xl">
           <div className="inline-block px-6 py-3 bg-neutral-light rounded-full border border-neutral-gray/20 text-sm text-neutral-black mb-8 font-medium">
             STOP OVERPAYING FOR DISCONNECTED TECH SOLUTIONS
@@ -44,7 +49,7 @@ const HeroSection = () => {
               Start Your Free Audit
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="xl">
+            <Button variant="outline" size="xl" onClick={scrollToProcess}>
               View Our Approach
             </Button>
           </div>
