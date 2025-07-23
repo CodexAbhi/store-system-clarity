@@ -23,13 +23,28 @@ const Footer = () => {
               <Button variant="ghost" size="icon" className="text-neutral-gray hover:text-neutral-white">
                 <Facebook className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="text-neutral-gray hover:text-neutral-white">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="text-neutral-gray hover:text-neutral-white"
+                onClick={() => window.open('https://x.com/outlfy', '_blank')}
+              >
                 <Twitter className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="text-neutral-gray hover:text-neutral-white">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="text-neutral-gray hover:text-neutral-white"
+                onClick={() => window.open('https://www.linkedin.com/company/outlfy/', '_blank')}
+              >
                 <Linkedin className="h-5 w-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="text-neutral-gray hover:text-neutral-white">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="text-neutral-gray hover:text-neutral-white"
+                onClick={() => window.open('https://www.instagram.com/outlfy_business_coach/', '_blank')}
+              >
                 <Instagram className="h-5 w-5" />
               </Button>
             </div>
