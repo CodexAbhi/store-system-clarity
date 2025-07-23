@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-accent-lime rounded-[30%]"></div>
+              <img src="/public/commerce_white.svg" alt="RetailSync" className="w-8 h-8" />
               <span className="text-xl font-semibold text-neutral-white">RetailSync</span>
             </div>
             <p className="text-neutral-gray leading-relaxed font-light">
@@ -69,7 +69,7 @@ const Footer = () => {
             </div>
             
             <div className="flex items-center space-x-8 text-sm font-medium">
-              <a href="#about" className="text-neutral-gray hover:text-neutral-white transition-colors">
+              <a href="https://www.outlfy.com/about" className="text-neutral-gray hover:text-neutral-white transition-colors">
                 ABOUT US
               </a>
               <a href="#contact" className="text-neutral-gray hover:text-neutral-white transition-colors">

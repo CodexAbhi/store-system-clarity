@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Lottie from "lottie-react";
+import animationData from "../../public/lottie.json";
 
 const HeroSection = () => {
   const scrollToContact = () => {
@@ -21,41 +23,56 @@ const HeroSection = () => {
       <div className="absolute top-1/3 right-1/3 w-4 h-4 bg-neutral-black rounded-full"></div>
       
       <div className="container mx-auto px-6 py-20 z-10 relative">
-        <div className="max-w-4xl">
-          <div className="inline-block px-6 py-3 bg-neutral-light rounded-full border border-neutral-gray/20 text-sm text-neutral-black mb-8 font-medium">
-            STOP OVERPAYING FOR DISCONNECTED TECH SOLUTIONS
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left side content */}
+          <div>
+            <div className="inline-block px-6 py-3 bg-neutral-light rounded-full border border-neutral-gray/20 text-sm text-neutral-black mb-8 font-medium">
+              STOP OVERPAYING FOR DISCONNECTED TECH SOLUTIONS
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold text-neutral-black mb-8 leading-tight tracking-tight">
+              Growth-First{" "}
+              <span className="relative">
+                Tech Partnership
+                <div className="absolute -bottom-2 left-0 w-full h-1 bg-accent-lime rounded-full"></div>
+              </span>
+            </h1>
+            
+            <p className="text-xl text-neutral-gray mb-12 max-w-2xl font-light leading-relaxed">
+              We become your strategic tech ally—auditing, building, and scaling your digital 
+              ecosystem so you save costs, make data-driven decisions, and focus entirely on growth.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 mb-16">
+              <Button 
+                variant="minimal" 
+                size="xl" 
+                onClick={scrollToContact}
+                className="group"
+              >
+                Start Your Free Audit
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button variant="outline" size="xl" onClick={scrollToProcess}>
+                View Our Approach
+              </Button>
+            </div>
+            
+            <div className="text-center lg:text-left">
+              <p className="text-neutral-gray font-light">Limited audit slots available this month</p>
+            </div>
           </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold text-neutral-black mb-8 leading-tight tracking-tight">
-            Growth-First{" "}
-            <span className="relative">
-              Tech Partnership
-              <div className="absolute -bottom-2 left-0 w-full h-1 bg-accent-lime rounded-full"></div>
-            </span>
-          </h1>
-          
-          <p className="text-xl text-neutral-gray mb-12 max-w-2xl font-light leading-relaxed">
-            We become your strategic tech ally—auditing, building, and scaling your digital 
-            ecosystem so you save costs, make data-driven decisions, and focus entirely on growth.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 mb-16">
-            <Button 
-              variant="minimal" 
-              size="xl" 
-              onClick={scrollToContact}
-              className="group"
-            >
-              Start Your Free Audit
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="outline" size="xl" onClick={scrollToProcess}>
-              View Our Approach
-            </Button>
-          </div>
-          
-          <div className="text-center">
-            <p className="text-neutral-gray font-light">Limited audit slots available this month</p>
+
+          {/* Right side lottie animation */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="w-full max-w-lg">
+              <Lottie 
+                animationData={animationData} 
+                loop={true}
+                autoplay={true}
+                className="w-full h-auto"
+              />
+            </div>
           </div>
         </div>
       </div>

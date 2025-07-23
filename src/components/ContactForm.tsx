@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { ArrowRight, Phone, Mail, MapPin } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -25,24 +26,47 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    toast({
-      title: "Audit Request Submitted!",
-      description: "We'll contact you within 24 hours to schedule your free retail audit.",
-    });
-    
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      phone: "",
-      currentSystems: "",
-      painPoints: "",
-      revenue: "",
-      timeline: ""
-    });
+    try {
+      // Submit form data to Supabase
+      const { error } = await supabase
+        .from('form_submissions')
+        .insert([{
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          phone: formData.phone || null,
+          current_systems: formData.currentSystems || null,
+          pain_points: formData.painPoints,
+          revenue: formData.revenue || null,
+          timeline: formData.timeline || null
+        }]);
+
+      if (error) {
+        throw error;
+      }
+
+      toast({
+        title: "Audit Request Submitted!",
+        description: "We'll contact you within 24 hours to schedule your free retail audit.",
+      });
+      
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        currentSystems: "",
+        painPoints: "",
+        revenue: "",
+        timeline: ""
+      });
+    } catch (error: any) {
+      toast({
+        title: "Submission Failed",
+        description: error.message || "There was an error submitting your form. Please try again.",
+        variant: "destructive",
+      });
+    }
     
     setIsSubmitting(false);
   };
