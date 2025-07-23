@@ -111,7 +111,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <p className="text-neutral-black font-medium">Call Us</p>
-                  <p className="text-neutral-gray">+1 (555) 123-4567</p>
+                  <p className="text-neutral-gray">+91 6387 817 791</p>
                 </div>
               </div>
               

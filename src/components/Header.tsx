@@ -15,9 +15,16 @@ const Header = () => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-neutral-white/90 backdrop-blur-md border-b border-neutral-gray/10">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <img src="/public/commerce_black.svg" alt="RetailSync" className="w-8 h-8" />
-              <span className="text-xl font-semibold text-neutral-black">RetailSync</span>
+            <div className="flex items-center">
+              <img 
+                src="commerce_black.svg" 
+                alt="RetailSync Logo" 
+                className="h-8 w-auto" 
+                onError={(e) => {
+                  console.error('Logo failed to load:', e.target.src);
+                  e.target.style.display = 'none';
+                }}
+              />
             </div>
             
             <nav className="hidden md:flex items-center space-x-8">

@@ -12,9 +12,16 @@ const Footer = () => {
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Brand Section */}
           <div className="space-y-6">
-            <div className="flex items-center space-x-3">
-              <img src="/public/commerce_white.svg" alt="RetailSync" className="w-8 h-8" />
-              <span className="text-xl font-semibold text-neutral-white">RetailSync</span>
+            <div className="flex items-center">
+              <img 
+                src="commerce_white.svg" 
+                alt="RetailSync Logo" 
+                className="h-8 w-auto" 
+                onError={(e) => {
+                  console.error('Logo failed to load:', e.target.src);
+                  e.target.style.display = 'none';
+                }}
+              />
             </div>
             <p className="text-neutral-gray leading-relaxed font-light">
               Your long-term tech partner – building ecosystems that automate growth.
