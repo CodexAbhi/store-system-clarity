@@ -112,3 +112,11 @@ All colors MUST be HSL.
     @apply bg-background text-foreground font-kanit;
   }
 }
+
+.lottie-animation>canvas {
+    position: absolute;
+    left: 29pc;
+    transform: scale(1.5);
+    top: 0;
+    display: block;
+}
