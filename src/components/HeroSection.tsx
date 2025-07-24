@@ -15,10 +15,10 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen bg-neutral-white relative overflow-hidden pt-20">
+    <section id="home" className="min-h-screen  relative overflow-hidden pt-20">
       {/* Background decorative elements */}
-      <div className="absolute top-20 right-10 w-32 h-32 bg-accent-lime rounded-[30%] opacity-20"></div>
-      <div className="absolute bottom-20 left-10 w-48 h-48 bg-accent-coral rounded-[60%] opacity-15 z-0"></div>
+      <div className="absolute top-20 right-10 w-32 h-32 bg-accent-lime rounded-[30%] opacity-20 z-50"></div>
+      <div className="absolute bottom-20 left-10 w-48 h-48 bg-accent-coral rounded-[60%] opacity-15 z-10"></div>
       <div className="absolute top-1/2 right-1/4 w-6 h-6 bg-neutral-black rounded-full"></div>
       <div className="absolute top-1/3 right-1/3 w-4 h-4 bg-neutral-black rounded-full"></div>
       
@@ -64,13 +64,13 @@ const HeroSection = () => {
           </div>
 
           {/* Right side lottie animation */}
-          <div className="flex justify-center lg:justify-end">
+          <div className="justify-center lg:justify-end hidden md:flex">
             <div className="w-full max-w-lg">
               <Lottie 
                 animationData={animationData} 
                 loop={true}
                 autoplay={true}
-                className="w-full h-auto"
+                className="w-full h-auto scale-[1.8]"
               />
             </div>
           </div>

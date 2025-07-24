@@ -19,7 +19,7 @@ const Header = () => {
               <img 
                 src="commerce_black.svg" 
                 alt="RetailSync Logo" 
-                className="h-8 w-auto" 
+                className="h-14 w-auto" 
                 onError={(e) => {
                   console.error('Logo failed to load:', e.target.src);
                   e.target.style.display = 'none';
