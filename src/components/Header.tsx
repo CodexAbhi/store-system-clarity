@@ -21,8 +21,9 @@ const Header = () => {
                 alt="RetailSync Logo" 
                 className="h-14 w-auto" 
                 onError={(e) => {
-                  console.error('Logo failed to load:', e.target.src);
-                  e.target.style.display = 'none';
+                  const target = e.currentTarget as HTMLImageElement;
+                  console.error('Logo failed to load:', target.src);
+                  target.style.display = 'none';
                 }}
               />
             </div>

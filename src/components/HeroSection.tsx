@@ -23,7 +23,7 @@ const HeroSection = () => {
       <div className="absolute top-1/3 right-1/3 w-4 h-4 bg-neutral-black rounded-full"></div>
       
       <div className="container mx-auto px-6 py-20 z-10 relative">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid xl:grid-cols-2 gap-12 items-center">
           {/* Left side content */}
           <div>
             <div className="inline-block px-6 py-3 bg-neutral-light rounded-full border border-neutral-gray/20 text-sm text-neutral-black mb-8 font-medium">
