@@ -25,7 +25,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 py-20 z-10 relative">
         <div className="grid xl:grid-cols-2 gap-12 items-center">
           {/* Left side content */}
-          <div>
+          <div className="relative z-20">
             <div className="inline-block px-6 py-3 bg-neutral-light rounded-full border border-neutral-gray/20 text-sm text-neutral-black mb-8 font-medium">
               STOP OVERPAYING FOR DISCONNECTED TECH SOLUTIONS
             </div>
@@ -64,7 +64,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right side lottie animation */}
-          <div className="justify-center lg:justify-end hidden md:flex">
+          <div className="justify-center lg:justify-end hidden md:flex relative z-10">
             <div className="w-full max-w-lg">
               <Lottie 
                 animationData={animationData} 
