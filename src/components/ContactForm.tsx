@@ -27,7 +27,7 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      const CONTACT_API_URL = import.meta.env.VITE_CONTACT_API_URL || "/api/contact";
+      const CONTACT_API_URL =  "https://outlfy.com/api/contact";
 
       const payload = {
         name: formData.name,
