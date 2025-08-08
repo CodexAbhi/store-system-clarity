@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { ArrowRight, Phone, Mail, MapPin } from "lucide-react";
-// Using external contact API (outlfy.com) instead of Supabase
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -27,37 +27,21 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      const CONTACT_API_URL =  "https://outlfy.com/api/contact";
+      const { error } = await supabase
+        .from('form_submissions')
+        .insert({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          phone: formData.phone || null,
+          current_systems: formData.currentSystems || null,
+          pain_points: formData.painPoints,
+          revenue: formData.revenue || null,
+          timeline: formData.timeline || null
+        });
 
-      const payload = {
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone || undefined,
-        subject: "Retail Audit Request",
-        message: formData.painPoints || "",
-        formType: "contact",
-        source: "store-system-clarity",
-        company: formData.company,
-        timeline: formData.timeline || undefined,
-        meta: {
-          currentSystems: formData.currentSystems || undefined,
-          revenueRange: formData.revenue || undefined,
-        },
-      };
-
-      const res = await fetch(CONTACT_API_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
-
-      const result = await res.json().catch(() => ({}));
-      if (!res.ok || result?.error) {
-        const errMsg = result?.error || `Request failed (${res.status})`;
-        throw new Error(errMsg);
+      if (error) {
+        throw error;
       }
 
       toast({
